@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CT Web SDK </title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+    // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+   clevertap.account.push({ "id": "444-Z87-8Z7Z" }, "EU1");
+   clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+   clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
+
+    clevertap.spa = true;
+    (function () {
+            var wzrk = document.createElement('script');
+            wzrk.type = 'text/javascript';
+            wzrk.async = true;
+            wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wzrk, s);
+     })();
+   </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Store</h1>
+
+        <div class="login-form">
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="tel" id="phone" placeholder="Phone">
+            <select id="membership">
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+                <option value="Platinum">Platinum</option>
+            </select>
+            <button id="loginButton">Login</button>
+        </div>
+
+        <div id="product" class="product">
+            <img src="https://via.placeholder.com/150" alt="Sample Product">
+            <h2>Sample Product</h2>
+            <button id="viewProductButton">View Product</button>
+        </div>
+
+        <button id="enableNotificationsButton">Enable Push Notifications</button>
+        <button id="addToCartButton">Add to Cart</button>
+
+    </div>
+
+    <div id="clevertap-native-display" class="native-display"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
