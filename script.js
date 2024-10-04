@@ -107,5 +107,9 @@ document.addEventListener('mouseenter', function() {
 });
 
 function openLuckyDraw() {
-    window.location.href = "https://gleam.io/MdGAK/carry1st-shop-lucky-draw";
+    window.open(
+        "https://gleam.io/MdGAK/carry1st-shop-lucky-draw", 
+        "LuckyDrawWindow", 
+        "width=600,height=400,scrollbars=yes,resizable=yes"
+    );
 }
