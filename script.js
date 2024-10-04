@@ -105,3 +105,7 @@ document.addEventListener('mouseleave', function(event) {
 document.addEventListener('mouseenter', function() {
     clearTimeout(exitIntentTimeout);
 });
+
+function openLuckyDraw() {
+    window.open("https://gleam.io/MdGAK/carry1st-shop-lucky-draw", "_blank");
+}
