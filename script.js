@@ -50,7 +50,6 @@ document.getElementById('viewProductButton').addEventListener('click', function(
         "Category": "Sample Category",
         "Price": 99.99,
         "Currency": "USD"
-        "Items|Image url":"https://cdn.shopify.com/s/files/1/0582/2270/6885/files/23-10-2023Powersutra05677.jpg?v=1699029211"
     });
     alert('Product Viewed Event Sent');
 });
