@@ -109,3 +109,20 @@ document.addEventListener('mouseenter', function() {
 function openLuckyDraw() {
     window.location.href = "https://gleam.io/MdGAK/carry1st-shop-lucky-draw";
 }
+
+document.getElementById("fireBookingEvent").addEventListener("click", () => {
+  // Generate current time in epoch format
+  const currentEpoch = Math.floor(Date.now() / 1000);
+
+  // Fire the CleverTap event
+  clevertap.event.push("booking_created", {
+    orderNumber: "ORD12345", // Example order number
+    type: "SERVICE",         // Example type
+    name: "Service Booking", // Example service name
+    serviceType: "On-Site",  // Example service type
+    dateTime: `$D_${currentEpoch}` // Pass the current time in epoch format
+  });
+
+  console.log("Booking Created Event Fired with current time:", `$D_${currentEpoch}`);
+});
+
