@@ -127,27 +127,3 @@ document.getElementById("fireBookingEvent").addEventListener("click", () => {
 
   console.log("Booking Created Event Fired with current time:", `$D_${currentEpoch}`);
 });
-
-function getLocation(callback) {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const lat = position.coords.latitude;
-                const lng = position.coords.longitude;
-                callback(lat, lng); // Pass lat, lng to the callback
-            },
-            (error) => {
-                console.error("Error fetching location:", error.message);
-                callback(null, null); // Pass nulls if location fetch fails
-            },
-            {
-                enableHighAccuracy: true,
-            }
-        );
-    } else {
-        console.warn("Geolocation is not supported by this browser.");
-        callback(null, null); // Pass nulls if geolocation is unsupported
-    }
-}
-
-
