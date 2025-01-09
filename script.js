@@ -7,7 +7,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-clevertap.event.push("Web Session Started");
 //Push Notification Permission
 document.getElementById('enableNotificationsButton').addEventListener('click', function() {
     clevertap.notifications.push({
