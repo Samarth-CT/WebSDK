@@ -6,6 +6,8 @@ if ('serviceWorker' in navigator) {
         console.log('Service Worker registration failed:', error);
     });
 }
+
+clevertap.event.push("Web Session Started");
 //Push Notification Permission
 document.getElementById('enableNotificationsButton').addEventListener('click', function() {
     clevertap.notifications.push({
